@@ -1,5 +1,5 @@
 /**
- * The required settings for interacting with the Toggl API system.
+ * The required settings for interacting with the Toggl API.
  */
 export interface APIConfig {
   /** The Username/e-mail or token to use for API authentication. */
