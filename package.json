@@ -1,0 +1,29 @@
+{
+  "name": "@4lch4/toggl-aid",
+  "version": "0.0.1",
+  "description": "A wrapper library for interacting with the Toggl API.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "package": "rm -rf ./dist; tsc --pretty",
+    "pretty:code": "prettier --write *.ts",
+    "pretty:project": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4lch4/Toggl-Aid"
+  },
+  "keywords": ["toggl", "toggl-api", "toggl-cli", "toggl-report", "toggle-reports", "wrapper", "wrapper-api", "wrapper-library"],
+  "author": {
+    "email": "hello@4lch4.dev",
+    "name": "4lch4",
+    "url": "https://4lch4.dev"
+  },
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@4lch4/axios-aid": "^1.2.2"
+  }
+}
