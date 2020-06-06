@@ -8,7 +8,7 @@ export class Clients extends BaseEndpoint {
         data: client
       })
 
-      return res
+      return res.data ? res.data : res.status
     } catch (err) { return err }
   }
 }
