@@ -1,1 +1,4 @@
-export class Weekly {}
+import { BaseEndpoint } from '../BaseEndpoint';
+
+
+export class Weekly extends BaseEndpoint {}

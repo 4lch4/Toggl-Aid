@@ -10,9 +10,9 @@ export class ReportsAPI {
 
   constructor(configOpts: APIConfig) {
     if (configOpts) {
-      this.weekly = new Weekly()
-      this.details = new Details()
-      this.summary = new Summary()
+      this.weekly = new Weekly(configOpts)
+      this.details = new Details(configOpts)
+      this.summary = new Summary(configOpts)
     } else {
       throw new Error(
         'You must provide the configOpts parameter to use this library.'
