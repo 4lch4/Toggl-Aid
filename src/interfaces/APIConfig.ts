@@ -9,5 +9,9 @@ export interface APIConfig {
   password: string
 
   /** The base url of the API to use for requests. */
-  baseUrl: string
+  /**
+   * The base URL of the API to use for requests. If none is provided, the
+   * default used is https://www.toggl.com/api/v8.
+   */
+  baseUrl?: string
 }
