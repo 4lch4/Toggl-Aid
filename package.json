@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "package": "rm -rf ./dist; tsc --pretty",
+    "install:clean": "rm -rf ./node_modules; rm -f pnpm-lock.yaml; pnpm i",
     "pretty:code": "prettier --write *.ts",
     "pretty:project": "prettier --write ."
   },
