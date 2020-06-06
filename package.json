@@ -1,6 +1,6 @@
 {
   "name": "@4lch4/toggl-aid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A wrapper library for interacting with the Toggl API.",
   "main": "./dist/index.js",
   "scripts": {
@@ -12,7 +12,16 @@
     "type": "git",
     "url": "https://github.com/4lch4/Toggl-Aid"
   },
-  "keywords": ["toggl", "toggl-api", "toggl-cli", "toggl-report", "toggle-reports", "wrapper", "wrapper-api", "wrapper-library"],
+  "keywords": [
+    "toggl",
+    "toggl-api",
+    "toggl-cli",
+    "toggl-report",
+    "toggle-reports",
+    "wrapper",
+    "wrapper-api",
+    "wrapper-library"
+  ],
   "author": {
     "email": "hello@4lch4.dev",
     "name": "4lch4",
