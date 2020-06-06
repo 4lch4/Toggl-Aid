@@ -1,6 +1,6 @@
 {
   "name": "@4lch4/toggl-aid",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A wrapper library for interacting with the Toggl API.",
   "main": "./dist/index.js",
   "scripts": {
