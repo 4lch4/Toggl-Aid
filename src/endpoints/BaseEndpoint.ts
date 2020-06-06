@@ -34,6 +34,6 @@ export class BaseEndpoint {
    * Defaults.
    */
   private getBaseURL(): string {
-    return this.configOpts.baseUrl ? this.configOpts.baseUrl : Defaults.baseUrl
+    return this.configOpts.baseUrl ? this.configOpts.baseUrl : Defaults.baseTogglUrl
   }
 }
