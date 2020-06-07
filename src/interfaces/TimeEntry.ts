@@ -1,3 +1,51 @@
+/** The standard model of a Time Entry. */
+export interface TimeEntry {
+  /** The description of the entry, strongly suggested to be used. */
+  description?: string
+
+  /** The workspace ID (required if `pid` or `tid` not supplied). */
+  wid?: number
+
+  /** Project ID */
+  pid?: number
+
+  /** Task ID */
+  tid?: number
+
+  /** (Pro Feature) */
+  billable?: boolean
+
+  /** Time Entry start time (ISO 8601 Date & Time). */
+  start: Date
+
+  /** Time Entry stop time (ISO 8601 Date & Time). */
+  stop?: Date
+
+  /**
+   * Time Entry duration in seconds. If the Time Entry is currently running, the
+   * duration attribute contains a negative value, denoting the start of the
+   * Time Entry in seconds since epoch (1970/01/01). The correct duration can be
+   * calculated as `current_time + duration` where `current_time` is the current
+   * time in seconds since epoch.
+   */
+  duration: number
+
+  /** The name of your client app. */
+  created_with: string
+
+  /** A list of Tag name. */
+  tags?: string[]
+
+  /** Should Toggl show the start and stop time of this Time Entry? */
+  duronly?: boolean
+
+  /**
+   * Timestamp that is sent in the response, indicates the time item was last
+   * updated.
+   */
+  at: Date
+}
+
 /** The object to send for creating a new Time Entry. */
 export interface TimeEntry_NEW {
   description: string
