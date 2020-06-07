@@ -14,6 +14,10 @@ export class BaseEndpoint {
     this.axios = this.buildAxiosClient()
   }
 
+  respond(res: any) {
+    return res.data ? res.data : res.status
+  }
+
   /**
    * Creates a new AxiosAid instance and stores it as the axios param to be used
    * by any extending classes.
