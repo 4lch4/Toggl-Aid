@@ -23,14 +23,10 @@ export class BaseEndpoint {
    * by any extending classes.
    */
   private buildAxiosClient(): AxiosAid {
-    return new AxiosAid(
-      this.getBaseURL(),
-      Defaults.headers,
-      {
-        username: this.configOpts.username,
-        password: this.configOpts.password
-      }
-    )
+    return new AxiosAid(this.getBaseURL(), Defaults.headers, {
+      username: this.configOpts.username,
+      password: this.configOpts.password
+    })
   }
 
   /**
@@ -38,6 +34,8 @@ export class BaseEndpoint {
    * Defaults.
    */
   private getBaseURL(): string {
-    return this.configOpts.baseUrl ? this.configOpts.baseUrl : Defaults.baseTogglUrl
+    return this.configOpts.baseUrl
+      ? this.configOpts.baseUrl
+      : Defaults.baseTogglUrl
   }
 }
