@@ -1,4 +1,5 @@
 import { BaseEndpoint } from '../BaseEndpoint'
+import { Project_NEW, Project_GET_RES } from '../../interfaces/Project'
 
 export class Projects extends BaseEndpoint {
   async createProject(project: Project_NEW) {
