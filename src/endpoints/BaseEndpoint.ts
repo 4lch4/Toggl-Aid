@@ -1,17 +1,27 @@
-import { AxiosAid } from '@4lch4/axios-aid'
+// import { AxiosAid } from '@4lch4/axios-aid'
+import axios, { AxiosInstance } from 'axios'
 import { APIConfig } from '../interfaces/APIConfig'
 import { Defaults } from '../utils/Defaults'
+
 
 export class BaseEndpoint {
   /** The config options for the API provided to the constructor. */
   configOpts: APIConfig
 
+  client: AxiosInstance
+
   /** The AxiosAid client used for performing requests. */
-  axios: AxiosAid
+  // axios: AxiosAid
 
   constructor(configOpts: APIConfig) {
     this.configOpts = configOpts
-    this.axios = this.buildAxiosClient()
+
+    this.client = axios.create({
+      headers: {},
+      baseURL: configOpts.baseUrl
+    })
+
+    // this.axios = this.buildAxiosClient()
   }
 
   respond(res: any) {
@@ -22,12 +32,12 @@ export class BaseEndpoint {
    * Creates a new AxiosAid instance and stores it as the axios param to be used
    * by any extending classes.
    */
-  private buildAxiosClient(): AxiosAid {
-    return new AxiosAid(this.getBaseURL(), Defaults.headers, {
-      username: this.configOpts.username,
-      password: this.configOpts.password
-    })
-  }
+  // private buildAxiosClient(): AxiosAid {
+  //   return new AxiosAid(this.getBaseURL(), Defaults.headers, {
+  //     username: this.configOpts.username,
+  //     password: this.configOpts.password
+  //   })
+  // }
 
   /**
    * Get the base URL for the API from the configOpts param or from the stored
