@@ -34,7 +34,7 @@
     "@4lch4/axios-aid": "^1.2.2"
   },
   "devDependencies": {
-    "prettier": "2.0.5",
+    "prettier": "2.6.0",
     "typescript": "3.9.5"
   },
   "prettier": {
